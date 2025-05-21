@@ -21,7 +21,7 @@ body{
 
 .container{
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 4fr 1fr;
     grid-template-rows: 1fr 4fr;
 }
 
@@ -59,4 +59,29 @@ body{
 .header .buttons ul{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+}
+
+/* Sidebar Grid */
+
+.sidebar{
+    display: grid;
+    grid-template-rows: 1fr 5fr 3fr;
+}
+.sidebar li, .dashboard{
+    padding: 1rem;
+    font-weight: bold;
+    color: white;
+    font-size: 1em;
+}
+
+.sidebar img{
+    margin-right: 1rem;
+}
+
+.dashboard{
+    padding: .5em;
+    font-size: 1.5rem;
+}
+.dashboard img{
+    margin-right: .5rem;
 }
