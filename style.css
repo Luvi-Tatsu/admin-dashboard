@@ -9,20 +9,14 @@ ul,li{
 body{
    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
    height: 100%;
+   background-color: rgb(42, 34, 34);
 }
-
-/* Erasable, for grid layout */
-/* *{border: solid 1px orange;} */
-/* .container>.header{ background-color: pink; box-shadow: 10px;} */
-.container>.sidebar{background-color: lightblue;}
-.container>.content{background-color: rgb(209, 203, 203);}
-.container>.updates{background-color: lightsalmon;}
 
 
 .container{
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: .9fr 4fr 50px;
 }
 
 /* .container div {
@@ -34,6 +28,8 @@ body{
 
 .header{grid-column: 2/span2;}
 .sidebar{grid-row: 1/span2;}
+.footer{grid-column-start: 2;
+        grid-column-end: -1;}
 
 /* Header Grid */
 .header{
@@ -41,8 +37,8 @@ body{
     grid-template-columns: 3fr 1fr;
     padding: 1rem 3rem 1rem 3rem;
     align-items: center;
-    gap: 2rem;
     font-weight: bold;
+    gap: 1rem;
 }
 
 .header .notification>ul{
@@ -54,8 +50,8 @@ body{
 
 .header .name-plate{
     display: grid;
-    grid-template-columns: 1fr 6fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 12fr;
+
 }
 .name-plate>.icon{grid-row: 1/ span 2;}
 
@@ -66,13 +62,12 @@ body{
 }
 
 /* Sidebar Grid */
-
-.sidebar{
-    display: grid;
-    grid-template-rows: 1fr 5fr 4fr;
+.sidebar>div{
+    margin-bottom: 2rem;
 }
 .sidebar li, .dashboard{
     padding: 1rem;
+    padding-bottom: 0;
     font-weight: bold;
     color: white;
     font-size: 1em;
@@ -97,24 +92,28 @@ body{
 
 .content>.article{
     display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* grid-template-rows: repeat(auto-fit, minmax(250px, 1fr)); */
+    grid-template-columns: minmax(200px,1fr) minmax(200px,1fr);
+    /* grid-template-rows: repeat(auto-fit, minmax(250px, 1fr)); */
     gap: 1rem;
 }
 
-.card{
+.article .card{
     padding: 1rem;
+    
 }
 .card .img{
     text-align: end;
     
 }
 .card img{
+    margin-top: 2rem;
     margin-right: 1rem;
 }
 
 .project{
-     padding: 1rem;
+     padding-top: 1rem;
+     margin-bottom: .5rem;
 }
 .title ,.project{
     font-weight: bold;
@@ -122,7 +121,7 @@ body{
 
 /* updates grid */
 
-.updates{ padding: 1rem 0 0 0;}
+.updates{ padding: 1rem 1.5rem 0 0;}
 .updates .box{
     display: grid;
     grid-template-rows: repeat(3,1fr);
@@ -136,6 +135,9 @@ body{
 }
 
 /* header design */
+.header{
+     box-shadow: 0 5px rgb(160, 160, 160);
+}
 .header .buttons button{
  border-radius: 100px;
  background-color: #405cf5;
@@ -161,14 +163,53 @@ body{
     border: 0;
     height: 2rem;
     margin-left: 1rem;
+    padding: 1rem;
 }
  
+  .name-plate .icon{
+    padding: 1rem;
+    padding-left: 0;
+  }
   
-  
-  
+  /*sidebar design*/
+
+  .sidebar{
+    padding: 1rem;
+  }
+  .dashboard{
+    padding-bottom: 0;
+  }
  
+  /*content* design*/
+.content .card{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: .4em 0 rgba(249, 213, 142, 0.684) inset,
+    2px 3px rgb(160, 160, 160);}
+.content .contents{
+    color: rgb(141, 140, 140);
+}
   
-  
-  
+/* update design   */
+.updates .card , .updates .box{
+    background-color: white;
+    padding: .5rem;
+}
 
+.updates .box{
+    box-shadow: 2px 3px rgb(160, 160, 160);   
+    border-radius: 10px;
+    margin-bottom: .5rem;
+}
 
+.container{
+    background-color: lightgray;
+
+}
+
+.container>.sidebar{background-color: rgb(121, 145, 238);}
+/* Erasable, for grid layout */
+/* *{border: solid 1px orange;} */
+/* .container>.header{ background-color: pink; box-shadow: 10px;} */
+
+.header{background-color: white; box-shadow: 3px 3px rgb(160, 160, 160);}
