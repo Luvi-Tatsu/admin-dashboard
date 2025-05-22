@@ -12,7 +12,7 @@ body{
 }
 
 /* Erasable, for grid layout */
-*{border: solid 1px orange;}
+/* *{border: solid 1px orange;} */
 .container>.header{ background-color: pink; box-shadow: 10px;}
 .container>.sidebar{background-color: lightblue;}
 .container>.content{background-color: rgb(209, 203, 203);}
@@ -115,4 +115,19 @@ body{
 }
 .title ,.project{
     font-weight: bold;
+}
+
+/* updates grid */
+
+.updates{ padding: 1rem 0 0 0;}
+.updates .box{
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    font-size: .7rem;
+}
+
+.box ul{
+    font-size: 1rem;
+    padding: 1rem;
+    
 }
