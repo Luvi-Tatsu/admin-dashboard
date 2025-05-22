@@ -13,7 +13,7 @@ body{
 
 /* Erasable, for grid layout */
 /* *{border: solid 1px orange;} */
-.container>.header{ background-color: pink; box-shadow: 10px;}
+/* .container>.header{ background-color: pink; box-shadow: 10px;} */
 .container>.sidebar{background-color: lightblue;}
 .container>.content{background-color: rgb(209, 203, 203);}
 .container>.updates{background-color: lightsalmon;}
@@ -38,16 +38,18 @@ body{
 /* Header Grid */
 .header{
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    padding: 1rem;
+    grid-template-columns: 3fr 1fr;
+    padding: 1rem 3rem 1rem 3rem;
     align-items: center;
     gap: 2rem;
+    font-weight: bold;
 }
 
 .header .notification>ul{
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
+    
 }
 
 .header .name-plate{
@@ -60,6 +62,7 @@ body{
 .header .buttons ul{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    justify-items: center;
 }
 
 /* Sidebar Grid */
@@ -131,3 +134,41 @@ body{
     padding: 1rem;
     
 }
+
+/* header design */
+.header .buttons button{
+ border-radius: 100px;
+ background-color: #405cf5;
+ box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+ box-sizing: border-box;
+ color: #fff;
+ cursor: pointer;
+ border-width: 0;
+ padding: 0 1rem;
+ width: 90px;
+ height: 44px;
+ text-align: center;
+}
+
+.header .buttons button:focus {
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}
+
+ #search{
+    width: 500px;
+    border-radius: 100px;
+    background-color: #dadadad4;
+    border: 0;
+    height: 2rem;
+    margin-left: 1rem;
+}
+ 
+  
+  
+  
+ 
+  
+  
+  
+
+
