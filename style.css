@@ -43,14 +43,15 @@ body{
 
 .header .notification>ul{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 2fr;
     justify-items: center;
-    
+    align-items: center;
 }
+.notification .name{justify-self: start;}
 
 .header .name-plate{
     display: grid;
-    grid-template-columns: 1fr 12fr;
+    grid-template-columns: 3rem 12fr;
 
 }
 .name-plate>.icon{grid-row: 1/ span 2;}
@@ -66,24 +67,23 @@ body{
     margin-bottom: 2rem;
 }
 .sidebar li, .dashboard{
-    padding: 1rem;
+   
     padding-bottom: 0;
     font-weight: bold;
     color: white;
-    font-size: 1em;
+    font-size: 1rem;
 }
 
-.sidebar img{
-    margin-right: 1rem;
-}
+
 
 .dashboard{
     padding: .5em;
     font-size: 1.5rem;
 }
-.dashboard img{
-    margin-right: .5rem;
+.sidebar .body, .sidebar .foot{
+    padding: .5rem;
 }
+
 
 /* Content grid */
 .content{
@@ -166,9 +166,11 @@ body{
     padding: 1rem;
 }
  
-  .name-plate .icon{
-    padding: 1rem;
-    padding-left: 0;
+  .name-plate .icon >img{
+    height: 3rem;
+    width: 3rem;
+    /* padding: 1rem;
+    padding-left: 0; */
   }
   
   /*sidebar design*/
@@ -176,9 +178,9 @@ body{
   .sidebar{
     padding: 1rem;
   }
-  .dashboard{
+  /* .dashboard{
     padding-bottom: 0;
-  }
+  } */
  
   /*content* design*/
 .content .card{
@@ -208,8 +210,52 @@ body{
 }
 
 .container>.sidebar{background-color: rgb(121, 145, 238);}
-/* Erasable, for grid layout */
-/* *{border: solid 1px orange;} */
-/* .container>.header{ background-color: pink; box-shadow: 10px;} */
 
 .header{background-color: white; box-shadow: 3px 3px rgb(160, 160, 160);}
+
+/* Img Sized */
+img{
+    width: 2rem;
+    height: 2rem;
+}
+
+.header img {
+    width: 2rem;
+    height: 2rem;
+}
+.search-bar{
+    display: grid;
+    grid-template-columns: 30px 1fr;
+}
+.notification-icon>img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.notification-icon{justify-self: end;}
+
+
+.dashboard{
+    display: grid;
+    grid-template-columns: 2.5rem 1fr;
+}
+.sidebar ul{
+    display: grid;
+    grid-template-columns: 2.5rem 1fr;
+    align-items: center;
+}
+.sidebar svg{
+    fill:white;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.dashboard > svg{
+    fill:white; 
+    width: 1.5rem;
+    height: 1.5rem;
+}
+a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
